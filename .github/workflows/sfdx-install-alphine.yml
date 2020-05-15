@@ -9,9 +9,9 @@ jobs:
       image: 'node:12.16.1-alpine3.9'
     # Check install
     steps:
+      - name: Install Salesforce CLI
       - env:
           DEV_DEBUG: true
-      - name: Install Salesforce CLI
         run: |
           apk add --no-cache bash
           wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
