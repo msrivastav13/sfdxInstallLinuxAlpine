@@ -1,4 +1,8 @@
-obs:
+name: Salesforce DX Install Test
+on:
+    [push]
+
+jobs:
   build:
     runs-on: ubuntu-latest
     container:
