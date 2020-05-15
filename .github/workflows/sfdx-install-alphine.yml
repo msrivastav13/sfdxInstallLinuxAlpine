@@ -10,9 +10,8 @@ jobs:
     # Check install
     steps:
       - name: Install Salesforce CLI
-      - env:
-          DEV_DEBUG: true
         run: |
+          export DEV_DEBUG=true
           apk add --no-cache bash
           wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
           mkdir sfdx-cli
