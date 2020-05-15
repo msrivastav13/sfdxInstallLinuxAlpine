@@ -9,6 +9,8 @@ jobs:
       image: 'node:12.16.1-alpine3.9'
     # Check install
     steps:
+      - env:
+          DEV_DEBUG: true
       - name: Install Salesforce CLI
         run: |
           apk add --no-cache bash
@@ -16,5 +18,3 @@ jobs:
           mkdir sfdx-cli
           tar xJf sfdx-linux-amd64.tar.xz -C sfdx-cli --strip-components 1
           ./sfdx-cli/install
-      - env:
-          DEV_DEBUG: true
