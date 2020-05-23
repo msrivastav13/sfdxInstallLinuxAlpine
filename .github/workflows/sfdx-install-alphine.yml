@@ -14,6 +14,6 @@ jobs:
           export DEV_DEBUG=true
           apk add --update nodejs npm
           wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
-          mkdir sfdx-cli
-          tar xJf sfdx-linux-amd64.tar.xz -C sfdx-cli --strip-components 1
-          ./sfdx-cli/install
+          mkdir sfdx
+          tar xJf sfdx-linux-amd64.tar.xz -C sfdx --strip-components 1
+          ./sfdx/install
