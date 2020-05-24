@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Install Salesforce CLI
         run: |
-          export DEV_DEBUG=true
-          which node
           apk add --no-cache bash
           wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
           mkdir sfdx
@@ -20,3 +18,4 @@ jobs:
           rm ./sfdx/bin/node
           mv /usr/local/bin/node ./sfdx/bin/node
           ./sfdx/install 
+          sfdx version
