@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: 'node:12.16.1-alpine3.9'
+      image: 'current-alpine3.10'
     # Check install
     steps:
       - name: Install Salesforce CLI
