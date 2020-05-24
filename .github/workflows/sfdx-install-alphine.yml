@@ -18,4 +18,4 @@ jobs:
           rm ./sfdx/bin/node
           mv /usr/local/bin/node ./sfdx/bin/node
           ./sfdx/install 
-          sfdx version
+          sfdx plugins --core
