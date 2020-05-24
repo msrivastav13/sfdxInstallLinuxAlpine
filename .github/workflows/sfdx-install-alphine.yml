@@ -17,5 +17,6 @@ jobs:
           wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
           mkdir sfdx
           tar xJf sfdx-linux-amd64.tar.xz -C sfdx --strip-components 1
-          ./sfdx/install || ln -s /usr/local/lib/sfdx/bin/node /usr/local/bin/node
-          ./sfdx/install
+          rm ./sfdx/bin/node
+          mv /usr/local/bin/node ./sfdx/bin/node
+          ./sfdx/install 
